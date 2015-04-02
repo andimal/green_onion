@@ -11,7 +11,8 @@ module GreenOnion
 
     def record(url, path, dimensions)
       visit url
-      page.driver.render(path, dimensions)
+      # page.driver.render(path, dimensions)
+      page.driver.save_screenshot(path, dimensions)
     end
 
   end
